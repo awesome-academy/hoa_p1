@@ -1,0 +1,151 @@
+include _head
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    +head('Mandala | Home')
+    block head
+  body
+    // header
+    header.header
+      .container
+        .row
+          // logo
+          h1.header__logo
+            a(href='#')
+              | Mandala
+          // end logo
+          // navigation
+          nav.header__nav
+            ul.nav
+              li.nav__item
+                a.nav__link(href='#') Trang chủ
+              li.nav__item
+                a.nav__link(href='#') Giới thiệu
+              li.nav__item
+                a.nav__link(href='#', data-dropdown='dropdown')
+                  | Sản Phẩm
+                  i.fas.fa-angle-down
+                ul.nav__children.nav.triangle-up.triangle-up--green
+                  li.nav__item
+                    a.nav__link(href='#') Dưỡng da
+                    -var listCare = ['Áo khoác','Bộ áo liền quần','Dresses','Quần / Váy','Quần short','Quần jeans','Đồ đan','Áo nỉ']
+                      ul.nav__item--care
+                        each index in listCare
+                          li.nav__children--care
+                            a(href='#')=index
+                  li.nav__item
+                    a.nav__link(href='#') Nước hoa
+                    -var listPerfume = ['Áo cánh / Áo sơ mi','Túi xách & Ba lô','Khăn quàng cổ và Foulards','Dệt kim Hats & Gloves','Vớ & Socks','Jewerly','Bi bảo vệ','Giày']
+                      ul.nav__item--care
+                        each index in listPerfume
+                          li.nav__children--care
+                            a(href='#')=index
+                  li.nav__item
+                    a.nav__link(href='#') Trang sức
+                    -var listPerfume = ['Áo cánh / Áo sơ mi','Túi xách & Ba lô','Khăn quàng cổ và Foulards','Dệt kim Hats & Gloves','Vớ & Socks','Jewerly','Bi bảo vệ','Giày']
+                      ul.nav__item--care
+                        each index in listPerfume
+                          li.nav__children--care
+                            a(href='#')=index
+              li.nav__item
+                a.nav__link(href='#') Tin tức
+              li.nav__item
+                a.nav__link(href='#') Bản đồ
+              li.nav__item
+                a.nav__link(href='#') Liên hệ
+          // end navigation
+          .header__right
+            // shopping-cart
+            .shopping-cart
+              a.shopping-cart__link(href='#')
+                i.fas.fa-shopping-cart
+            // end shopping-cart
+            // form-search
+            form.form-search(action='#', method='GET')
+              .form-search__input-container.form-search__hidden
+                .form-search__main
+                  button.form-search__button.js-close-button(type='button')
+                    i.fas.fa-ellipsis-h
+                  input.form-search__input(type='text', name='search', placeholder='Search...')
+              button.form-search__button.js-search-button(type='submit')
+                i.fas.fa-search
+            // end form-seach
+    // end header
+    block main
+    footer.footer
+      .container.main-footer
+        .row
+          // contact-us
+          .contact-us.main-footer__item
+            h4.main-footer__title Liên hệ với chúng tôi
+            .contact-us__content
+              p.contact-us__address
+                i.fas.fa-map-marker-alt
+                span Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+              p.contact-us__others
+                span.contact-us__item
+                  i.fas.fa-phone-alt
+                  | (04) 6674 2332
+                span.contact-us__hyphen -
+                span.contact-us__item
+                  i.fas.fa-phone-alt
+                  | (04) 3786 8904
+              p.contact-us__others
+                span.contact-us__item
+                  i.fas.fa-phone-alt
+                  | (08) 6680 9686
+                a.contact-us__item(href='mailto:Support@bizweb.vn')
+                  i.fas.fa-envelope
+                  | Support@bizweb.vn
+          .footer-others.main-footer__item
+            h4.main-footer__title Chuyển hàng
+            -var listTransform = ['Mua sắm trực tuyến','Đến từ chúng tôi gửi đến','Chính sách vận chuyển','Vận chuyển thông tin']
+              ul.footer-others__content
+                each index in listTransform 
+                  li.footer-others__item
+                    a.footer-others__link(href='#')= index
+          .footer-others.main-footer__item
+            h4.main-footer__title Hỗ trợ
+            -var listSupport = ['Câu chuyện về chúng tôi','Thanh toán an toàn','Tùy chọn vận chuyển','Chính sách vận chuyển']
+              ul.footer-others__content
+                each index in listSupport
+                  li.footer-others__item
+                    a.footer-others__link(href='#')= index
+          .footer-others.main-footer__item
+            h4.main-footer__title Thông tin
+            -var listInfo = ['Về chúng tôi','Điều khoản & điều kiện','Chính sách riêng tư','Đơn đặt hàng và Returns']
+              ul.footer-others__content
+                each index in listInfo
+                  li.footer-others__item
+                    a.footer-others__link(href='#')= index
+          .footer-others.main-footer__item
+            h4.main-footer__title My account
+            -var listAccount = ['Xem giỏ hàng','Sản phẩm yêu thích','Kiểm tra','Theo dõi đặt hàng của tôi']
+              ul.footer-others__content
+                each index in listAccount
+                  li.footer-others__item
+                    a.footer-others__link(href='#')= index
+      .footer__end
+        .container
+          .row
+            // copyright
+            .copyright
+              p.copyright__text &copy; Copyright 2008-2014 DKT Technology JSC
+            // end copyright
+            // payment
+            .payment
+              a.payment__type(href='#')
+                img(src='img/mastercard.PNG', alt='MasterCard')
+              a.payment__type(href='#')
+                img(src='img/visa.PNG', alt='Visa')
+              a.payment__type(href='#')
+                img(src='img/paypal.PNG', alt='PayPal')
+              a.payment__type(href='#')
+                img(src='img/maestro.PNG', alt='Maestro')
+            // end payment
+    // script
+    script(src='js/jquery-3.4.1.min.js')
+    script(src='js/slick.min.js')
+    script(src='js/master.js')
+    // end script

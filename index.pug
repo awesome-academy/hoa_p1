@@ -1,0 +1,357 @@
+extend pug/_layout
+
+block main
+    // body
+    // banner
+    section.banner
+      .container.banner__container
+        .banner__detail.ads
+          h2.ads__title GreenVera
+          p.ads__des Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
+          p.ads__price Giá chỉ 750.000
+          .ads__buy
+            a.ads__link(href='#') Mua hàng
+    // end banner
+    // showcase
+    section.showicon
+      .container
+        // selling-services
+        .row.selling-services
+          .selling-services__item
+            .selling-item__icon
+              i.fas.fa-plane
+            .selling-services__des Miễn phí vận chuyển
+          .divider
+          .selling-services__item
+            .selling-item__icon
+              i.fas.fa-gift
+            .selling-services__des Nhận ngay quà tặng trị giá 350.000đ
+          .divider
+          .selling-services__item
+            .selling-item__icon
+              i.fas.fa-star
+            .selling-services__des Giảm 30% cho đơn hàng trên 5.000.000đ
+        // end selling-services
+        // categories
+        .categories
+          .row
+            .categories__multiple
+              .categories__item.categories__item--bottom.clearfix
+                a(href='#')
+                  img(src='img/perfume.JPG', alt='Sữa Tắm')
+                .categories__title.categories__title--sunny.triangle-left.triangle-left--sunny
+                  a.title-link.title-link--light.title-link--bg-sunny(href='#') Sữa tắm
+              .categories__item.clearfix
+                a.saleoff(href='#')
+                  img(src='img/saleoff.JPG', alt='Giảm giá')
+                .categories__title.categories__title--grapes.triangle-right.triangle-right--grapes
+                  a.title-link.title-link--dark.title-link--bg-grapes(href='#') Nước hoa
+            .categories__introduce.categories__introduce--right
+              .categories__item
+                img.crown(src='img/crown.JPG', alt='Video')
+                .control
+                  button.control__button
+          .row
+            .categories__introduce.categories__introduce--left
+              .categories__item
+                a.combo(href='#')
+                  img(src='img/combo.JPG', alt='Combo Tắm Trắng')
+            .categories__multiple
+              .categories__item.categories__item--bottom.clearfix
+                a.right(href='#')
+                  img(src='img/diamond_gift.JPG', alt='Trang Sức')
+                .categories__title.categories__title--sea.triangle-right.triangle-right--sea
+                  a.title-link.title-link--dark.title-link--bg-sea.title-link--small(href='#') Trang sức
+              .categories__item.clearfix
+                a.woman(href='#')
+                  img(src='img/flower_woman.JPG', alt='Giảm giá')
+                .categories__title.categories__title--last.categories__title--rose.triangle-left.triangle-left--rose
+                  a.title-special(href='#')
+                    img.title-special__img(src='img/perfume.PNG', alt='Nước hoa')
+                    p.title-special__intro Quyến rũ hơn
+                    p.title-special__daisy
+                      span cùng
+                      span Daisy
+        // end categories
+        // review
+        .review
+          .review__carousel.js-review-carousel
+            .review__item
+              .review__author
+                img.review__author-ava(src='img/author_ava.JPG', alt='Author Tutile')
+              .review__des
+                p.review__text
+                  | Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến nhất, hãng Rohto
+                p.review__signature
+                  span Tutile
+                  span _ Giám đốc phát triển sản phẩm
+            .review__item
+              .review__author
+                img.review__author-ava(src='img/author_ava.JPG', alt='Author Tutile')
+              .review__des
+                p.review__text
+                  | Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến nhất, hãng Rohto
+                p.review__signature
+                  span Tutile
+                  span _ Giám đốc phát triển sản phẩm
+            .review__item
+              .review__author
+                img.review__author-ava(src='img/author_ava.JPG', alt='Author Tutile')
+              .review__des
+                p.review__text
+                  | Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến nhất, hãng Rohto
+                p.review__signature
+                  span Tutile
+                  span _ Giám đốc phát triển sản phẩm
+          .review__control.js-review-control
+        // end review
+    // end showcase
+    // carousel-product
+    section.carousel-product
+      // carousel-product-header
+      .carousel-product__header
+        // carousel-product-tab for product type in caroussel
+        .tab.js-tab
+          h4.tab__item
+            a.tab__link(href='#', data-tab='new-product') Sản phẩm mới
+          span.divider
+          h4.tab__item
+            a.tab__link.tab__active(href='#', data-tab='best-selling-product') Sản phẩm bán chạy
+          span.divider
+          h4.tab__item
+            a.tab__link(href='#', data-tab='special-product') Sản phẩm đặc biệt
+        // end carousel-product-tab
+        // carousel-product-nav for category
+        .carousel-product__nav
+          -var listCategory = ['Chăm sóc da', 'Dành cho tóc', 'Nước hoa', 'Trang sức', 'Quà tặng']
+          ul.nav
+            li.nav__item.first
+              a.nav__link(href='#') Mỹ phẩm
+            each index in listCategory
+              li.nav__item
+                a.nav__link(href='#')= index
+        // end carousel-product-nav
+      // end carousel-product-header
+      // carousel-product-main
+      // carousel-new-product
+      #new-product.container.carousel-product__main
+        .carousel-product__products.clearfix.js-carousel-product
+          -
+            var listNew = [
+              {img: 'oil_yellow.JPG', name: 'Home'}, 
+              {img: 'nail_pink.JPG', name: 'Debora'},
+              {img: 'wash_bottle.JPG', name: 'Sarvon'},
+              {img: 'cream_other.JPG', name: 'Tiffany'},
+              {img: 'lipstick_blue.JPG', name: 'Ohui'}
+            ]
+          // carousel-product-item
+          .carousel-product__item.product
+            img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
+            .product__detail
+              a.product__name(href='#') Home
+              a.product__type(href='#') Mỹ phẩm châu Âu
+              p.product__price
+                span 355.000
+                span 450.000
+            .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+          each index in listNew 
+            .carousel-product__item.product
+              img.product__img(src='img/' + index.img, alt='Son Môi')
+              .product__detail
+                a.product__name(href='#')= index.name
+                a.product__type(href='#') Mỹ phẩm châu Âu
+                p.product__price
+                  span 355.000
+              .product__interact
+                a.product__buy(href='#') Mua hàng
+                button.product__love(type='button')
+                  i.fas.fa-heart
+                button.product__change(type='button')
+                  i.fas.fa-sync-alt
+          // end carousel-product-item
+        // end carousel-product-main
+        // carousel-product-control
+        .carousel-product__control
+          button.control-prev.slick-prev(type='button')
+            img(src='img/previous.PNG', alt='Previous')
+          button.control-next.slick-next(type='button')
+            img(src='img/next.PNG', alt='Next')
+        // end carousel-product-control
+      // end carousel-new-product
+      // carousel-best-selling-product
+      #best-selling-product.container.carousel-product__main
+        .carousel-product__products.clearfix.js-carousel-product
+          -
+            var listNew = [
+              {img: 'oil_yellow.JPG', name: 'Home'}, 
+              {img: 'nail_pink.JPG', name: 'Debora'},
+              {img: 'wash_bottle.JPG', name: 'Sarvon'},
+              {img: 'cream_other.JPG', name: 'Tiffany'},
+              {img: 'lipstick_blue.JPG', name: 'Ohui'}
+            ]
+          // carousel-product-item
+          .carousel-product__item.product
+            img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
+            .product__detail
+              a.product__name(href='#') Home
+              a.product__type(href='#') Mỹ phẩm châu Âu
+              p.product__price
+                span 355.000
+                span 450.000
+            .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+          each index in listNew 
+            .carousel-product__item.product
+              img.product__img(src='img/' + index.img, alt='Son Môi')
+              .product__detail
+                a.product__name(href='#')= index.name
+                a.product__type(href='#') Mỹ phẩm châu Âu
+                p.product__price
+                  span 355.000
+              .product__interact
+                a.product__buy(href='#') Mua hàng
+                button.product__love(type='button')
+                  i.fas.fa-heart
+                button.product__change(type='button')
+                  i.fas.fa-sync-alt
+          // end carousel-product-item
+        // end carousel-product-main
+        // carousel-product-control
+        .carousel-product__control
+          button.control-prev.slick-prev(type='button')
+            img(src='img/previous.PNG', alt='Previous')
+          button.control-next.slick-next(type='button')
+            img(src='img/next.PNG', alt='Next')
+        // end carousel-product-control
+      // end carousel-best-selling-product
+      // carousel-special-product
+      #special-product.container.carousel-product__main
+        .carousel-product__products.clearfix.js-carousel-product
+          -
+            var listNew = [
+              {img: 'oil_yellow.JPG', name: 'Home'}, 
+              {img: 'nail_pink.JPG', name: 'Debora'},
+              {img: 'wash_bottle.JPG', name: 'Sarvon'},
+              {img: 'cream_other.JPG', name: 'Tiffany'},
+              {img: 'lipstick_blue.JPG', name: 'Ohui'}
+            ]
+          // carousel-product-item
+          .carousel-product__item.product
+            img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
+            .product__detail
+              a.product__name(href='#') Home
+              a.product__type(href='#') Mỹ phẩm châu Âu
+              p.product__price
+                span 355.000
+                span 450.000
+            .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+          each index in listNew 
+            .carousel-product__item.product
+              img.product__img(src='img/' + index.img, alt='Son Môi')
+              .product__detail
+                a.product__name(href='#')= index.name
+                a.product__type(href='#') Mỹ phẩm châu Âu
+                p.product__price
+                  span 355.000
+              .product__interact
+                a.product__buy(href='#') Mua hàng
+                button.product__love(type='button')
+                  i.fas.fa-heart
+                button.product__change(type='button')
+                  i.fas.fa-sync-alt
+          // end carousel-product-item
+        // end carousel-product-main
+        // carousel-product-control
+        .carousel-product__control
+          button.control-prev.slick-prev(type='button')
+            img(src='img/previous.PNG', alt='Previous')
+          button.control-next.slick-next(type='button')
+            img(src='img/next.PNG', alt='Next')
+        // end carousel-product-control
+      // end carousel-special-product
+    // end carousel-product
+    section.contact
+      // social-link
+      .social
+        -var listIcon = ['Facebook', 'Twitter', 'Instagram', 'Google+', 'Pinterest', 'Linkedin']
+          ul.nav
+            each index in listIcon
+              li.nav__item
+                a.nav__link(href='#')
+                  span.social__icon
+                    i.fab.fa-facebook-f
+                  =index
+      // end social-link
+      .container.clearfix
+        // about-us
+        .contact__item.about-us
+          h3.contact__title
+            | Về chúng tôi
+          p.header__logo
+            a(href='#')
+              | Mandala
+          .about-us__detail
+            p.about-us__intro
+              | Giới thiệu chung về mỹ phẩm handmade Madala
+            p.about-us__des
+              | Hi, chào các nàng... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày
+              | đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+              | Hi, chào các nàng... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày
+              | đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+              | Hi, chào các nàng... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày
+              | đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+            .about-us__see-more
+              a(href='#') Xem thêm
+        // end about-us
+        // blog
+        .contact__item.blog
+          h3.contact__title
+            | Blog
+          img.blog__img(src='img/blog_img.PNG', alt='Blog Avatar')
+          .blog__detail
+            p.blog__intro
+              | Review son kem Bourjois Velvet
+            p.blog__des
+              | Hi, chào các nàng... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+            p.blog__author Bởi Nam Tran ( 27 / 05 / 2015 )
+            .blog__more.clearfix
+              a.blog-read__more(href='#')
+                | Đọc thêm 
+                i.fas.fa-angle-right
+              a.blog__comment.right(href='#') 23 Bình luận
+        // end blog
+        .contact__item.others
+          // mail
+          .mail-us
+            h3.contact__title
+              |Gửi về cho chúng tôi
+            form.mail-us__form(action='#', method='POST')
+              input.mail-us__email(type='email', name='email', placeholder='Email của bạn')
+              p.mail-us__des Gửi email để nhận những ưu đãi mới nhất
+              input.mail-us__button(type='submit', value='Gửi')
+          // end mail-us
+          // tag-product
+          .tag-product
+            h3.contact__title
+              | Tag sản phẩm
+            -var listProduct = ['Đồng hồ', 'Túi', 'Phụ kiện','Đồng hồ', 'Túi', 'Giày', 'Sandal', 'Áo sơ mi', 'Nước hoa', 'Giày', 'Sandal', 'Trẻ em', 'Thời trang nữ', 'Trẻ em', 'Thời trang nữ']
+              .tag-product__wrapper-item
+                each index in listProduct
+                  a.tag-product__item(href='#')= index
+          // end tag-product
+    // end contact
+    // end body
