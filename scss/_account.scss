@@ -1,0 +1,74 @@
+.account {
+  margin-top: 21%;
+  margin-bottom: 13%;
+
+  &__title {
+    text-transform: uppercase;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 3%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 2%;
+}
+
+th {
+  background-color: #f9f9f9;
+  font-family: "Open Sans Bold";
+}
+
+th:nth-child(3) {
+  text-transform: uppercase;
+}
+
+th:nth-child(4) {
+  text-transform: uppercase;
+}
+
+th:nth-child(5) {
+  text-transform: uppercase;
+}
+
+td:nth-child(3) {
+  color: #ff0000;
+}
+
+td:nth-last-child(2)::after {
+  content: "đ";
+  font-size: 12px;
+  position: relative;
+  text-transform: lowercase;
+  bottom: 4px;
+}
+
+td:nth-last-child(1)::after {
+  content: "đ";
+  font-size: 12px;
+  position: relative;
+  text-transform: lowercase;
+  bottom: 4px;
+}
+
+.account-detail {
+  margin-top: 71%;
+
+  &__title {
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 12%;
+  }
+
+  &__name {
+    font-size: 20px;
+  }
+
+  &__des {
+    padding-left: 7%;
+  }
+}
