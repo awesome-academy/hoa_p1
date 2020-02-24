@@ -1,0 +1,60 @@
+extend pug/_layout
+
+block main
+  //body
+  section.container.blog-detail
+    h2.blog-detail__title Blog
+    p.blog-detail__des Bài viết mới nhất
+    .row.blog-detail__content
+      .col-md-3
+          .blog-left
+            each index in listImg
+              .blog-left__content
+                .blog-detail__left
+                  .blog-detail__image
+                    img(src="img/" + index)
+                  .blog-detail__white
+                    .blog-white__left a
+                    .blog-white__right b
+                .blog-detail__after
+                  span.date 11
+                  span.month / tháng 5
+                  p.author Đăng bởi GiangLe
+        .blog-after
+          h4.blog-after__title Blog tags
+              .blog-after__tag
+                each index in listProductBlog
+                  a.tag-product__item(href='#')= index
+        .blog-video
+          h4.blog-video__title Latest video
+          img(src="img/blog_detail1.jpg")
+          .blog-video__control
+            button.blog-video__controlbutton
+      .col-md-9
+        .blog-right
+          img(src="img/blog8.jpg")
+        .blog-white
+          .blog-white__left a
+          .blog-white__right b
+        h2.blog-right__title Nàng béo không ngại diện váy áo nổi bật
+        p.blog-right__content Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog vào một ngày hè nóng oi bức, khi mà dân tình đổ xô đi tắm Free để giải nhiệt. Trong tiết xuân hè, nàng ngoại cỡ thắp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ mi nhã nhặn. Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ caro, làm nên style vừa hiện đại, vừa phảng phất nét cổ điển. Lối diện đồ hàng ngày đơn giản, khỏe khoắn của cô khi kết hợp với chất liệu jean. Nữ blogger rức rỡ khi hòa trộn các gam đỏ, hồng, tím... một cách vui tươi, kèm theo các phụ kiện điệu đà.
+        p.blog-right__author Bởi Nam Tran ( 27 / 05 / 2015 )
+          .blog-right__more
+            a(href="") Đọc thêm
+              i.fas.fa-angle-right
+            a(href="") 23 Bình luận
+        p.blog-right__tag
+          span.tag Tag: &nbsp;&nbsp;
+          span.men Men
+        .form__title Đóng góp ý kiến
+        form(action="#").form-idea
+          .form-input
+            label(for="name") Tên *
+            input(type="text", name="name").form-idea__name
+          .form-input
+            label(for="email") Email *
+            input(type="email", name="email").form-idea__email
+          .form-input
+            label(for="idea") ý kiến *
+            textarea(name="idea", cols="30", rows="5").idea
+          button.submit(type="submit") Gửi ý kiến

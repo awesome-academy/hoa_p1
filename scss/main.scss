@@ -7,6 +7,13 @@
 @import '_register';
 @import '_about';
 @import '_blog';
+@import '_blog_detail';
+@import '_detail';
+@import '_list';
+@import '_gird';
+@import '_cart';
+@import '_page404';
+@import '_popup';
 
 @mixin contact {
   font-family: $font9;

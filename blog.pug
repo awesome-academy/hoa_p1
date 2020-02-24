@@ -1,0 +1,23 @@
+extend pug/_layout
+
+block main
+  //body
+  .container.blog-page
+    h2.blog-title Blog
+    .row
+        each index in listImg1
+          .col-md-4.list1
+            .blog1
+              .aspect
+                img(src="img/" + index)
+              .white
+                .white-left a
+                .white-right b
+            .blog-detail
+              .blog-detail__title Review son kem Bourjois Velvet
+              .blog-detail__content Hi, chào các nàng... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+              p.blog-detail__author Bởi Nam Tran ( 27 / 05 / 2015 )
+              .blog-detail__more
+                a(href="") Đọc thêm
+                  i.fas.fa-angle-right
+                a(href="") Bình luận

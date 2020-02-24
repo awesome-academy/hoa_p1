@@ -1,0 +1,37 @@
+extend pug/_layout
+
+block main
+  // body
+  section.container
+    .row
+      .col-md-9
+        .account
+          h2.account__title Tài Khoản
+          table
+            tr
+              th Order
+              th Date
+              th Tình trạng thanh toán
+              th Tổng
+              th Nợ
+            each index in listTableAccount
+              tr
+                td=index.order
+                td=index.date
+                td=index.status
+                td=index.sum
+                td=index.want
+      .col-md-3
+        .account-detail
+          h5.account-detail__title Chi tiết tài khoản
+          .account-detail__user
+            i.fas.fa-user
+            span.account-detail__name GiangLe
+            p.account-detail__des Leanhgiang89@gmail.com
+          .account-detail__address
+            i.fas.fa-map-marker-alt
+            span Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình, Hà Nội
+          .account-detail__tel
+            i.fas.fa-phone-alt
+            span (04) 3786 8904
+  // end body

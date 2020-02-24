@@ -136,14 +136,6 @@ block main
       // carousel-new-product
       #new-product.container.carousel-product__main
         .carousel-product__products.clearfix.js-carousel-product
-          -
-            var listNew = [
-              {img: 'oil_yellow.JPG', name: 'Home'}, 
-              {img: 'nail_pink.JPG', name: 'Debora'},
-              {img: 'wash_bottle.JPG', name: 'Sarvon'},
-              {img: 'cream_other.JPG', name: 'Tiffany'},
-              {img: 'lipstick_blue.JPG', name: 'Ohui'}
-            ]
           // carousel-product-item
           .carousel-product__item.product
             img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
@@ -159,7 +151,7 @@ block main
                 i.fas.fa-heart
               button.product__change(type='button')
                 i.fas.fa-sync-alt
-          each index in listNew 
+          each index in listNew
             .carousel-product__item.product
               img.product__img(src='img/' + index.img, alt='Son Môi')
               .product__detail
@@ -186,14 +178,6 @@ block main
       // carousel-best-selling-product
       #best-selling-product.container.carousel-product__main
         .carousel-product__products.clearfix.js-carousel-product
-          -
-            var listNew = [
-              {img: 'oil_yellow.JPG', name: 'Home'}, 
-              {img: 'nail_pink.JPG', name: 'Debora'},
-              {img: 'wash_bottle.JPG', name: 'Sarvon'},
-              {img: 'cream_other.JPG', name: 'Tiffany'},
-              {img: 'lipstick_blue.JPG', name: 'Ohui'}
-            ]
           // carousel-product-item
           .carousel-product__item.product
             img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
@@ -209,7 +193,7 @@ block main
                 i.fas.fa-heart
               button.product__change(type='button')
                 i.fas.fa-sync-alt
-          each index in listNew 
+          each index in listNew
             .carousel-product__item.product
               img.product__img(src='img/' + index.img, alt='Son Môi')
               .product__detail
@@ -236,14 +220,6 @@ block main
       // carousel-special-product
       #special-product.container.carousel-product__main
         .carousel-product__products.clearfix.js-carousel-product
-          -
-            var listNew = [
-              {img: 'oil_yellow.JPG', name: 'Home'}, 
-              {img: 'nail_pink.JPG', name: 'Debora'},
-              {img: 'wash_bottle.JPG', name: 'Sarvon'},
-              {img: 'cream_other.JPG', name: 'Tiffany'},
-              {img: 'lipstick_blue.JPG', name: 'Ohui'}
-            ]
           // carousel-product-item
           .carousel-product__item.product
             img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
@@ -259,7 +235,7 @@ block main
                 i.fas.fa-heart
               button.product__change(type='button')
                 i.fas.fa-sync-alt
-          each index in listNew 
+          each index in listNew
             .carousel-product__item.product
               img.product__img(src='img/' + index.img, alt='Son Môi')
               .product__detail
@@ -287,7 +263,6 @@ block main
     section.contact
       // social-link
       .social
-        -var listIcon = ['Facebook', 'Twitter', 'Instagram', 'Google+', 'Pinterest', 'Linkedin']
           ul.nav
             each index in listIcon
               li.nav__item
@@ -330,7 +305,7 @@ block main
             p.blog__author Bởi Nam Tran ( 27 / 05 / 2015 )
             .blog__more.clearfix
               a.blog-read__more(href='#')
-                | Đọc thêm 
+                | Đọc thêm
                 i.fas.fa-angle-right
               a.blog__comment.right(href='#') 23 Bình luận
         // end blog
@@ -348,7 +323,6 @@ block main
           .tag-product
             h3.contact__title
               | Tag sản phẩm
-            -var listProduct = ['Đồng hồ', 'Túi', 'Phụ kiện','Đồng hồ', 'Túi', 'Giày', 'Sandal', 'Áo sơ mi', 'Nước hoa', 'Giày', 'Sandal', 'Trẻ em', 'Thời trang nữ', 'Trẻ em', 'Thời trang nữ']
               .tag-product__wrapper-item
                 each index in listProduct
                   a.tag-product__item(href='#')= index

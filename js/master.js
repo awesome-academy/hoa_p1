@@ -47,33 +47,34 @@ function switchTab(nextTab) {
   $('.js-tab [data-tab]').removeClass('tab__active');
   $(nextTab).addClass('tab__active');
   $('.carousel-product__main').hide();
-  $(`#${idNextTab}`).show();
+  $('#${idNextTab}').show();
 
-  $(`#${idNextTab} .js-carousel-product`).slick({
+  $('#${idNextTab} .js-carousel-product').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    nextArrow: $(`#${idNextTab} .control-next`),
-    prevArrow: $(`#${idNextTab} .control-prev`)
+    nextArrow: $('#${idNextTab} .control-next'),
+    prevArrow: $('#${idNextTab} .control-prev')
   });
 }
 
 $('.js-tab [data-tab]').click(function (e) {
   var idCurrentTab = $('.js-tab .tab__active').attr('data-tab');
 
-  $(`#${idCurrentTab} .js-carousel-product`).slick('unslick');
+  $('#${idCurrentTab} .js-carousel-product').slick('unslick');
   e.preventDefault();
   switchTab(this);
 });
 
 switchTab($('.js-tab [data-tab="best-selling-product"]'));
 $('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var recipient = button.data('whatever'); // Extract info from data-* attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
+  var modal = $(this);
+  modal.find('.modal-title').text('New message to ' + recipient);
+  modal.find('.modal-body input').val(recipient);
+});
+
