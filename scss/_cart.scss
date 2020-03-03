@@ -1,0 +1,63 @@
+.cart {
+  padding-top: 12%;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &-detail {
+    padding-bottom: 10%;
+  }
+}
+
+.td-img1, .td-name1, .td-price1, .td-amount1, .td-total1, .td-delete1 {
+  text-transform: uppercase;
+}
+
+.td-price2, .td-total2 {
+  font-family: "Lobster";
+
+  &::after {
+    content: "đ";
+    font-size: 12px;
+    position: relative;
+    text-transform: lowercase;
+    bottom: 4px;
+  }
+}
+
+.cart-form {
+  width: 32%;
+  margin-left: 72%;
+  margin-top: 2%;
+
+  &__continue {
+    color: #fff;
+    background-color: #232222;
+    border: 1px solid;
+    text-transform: uppercase;
+    padding: 1%;
+    font-size: 13px;
+    width: 50%;
+  }
+
+  &__delete {
+    color: #fff;
+    background-color: #232222;
+    border: 1px solid;
+    text-transform: uppercase;
+    padding: 1%;
+    width: 14%;
+    font-size: 13px;
+  }
+
+  &__update {
+    color: #fff;
+    background-color: #789629;
+    border: 1px solid;
+    text-transform: uppercase;
+    padding: 1%;
+    width: 21%;
+    font-size: 13px;
+  }
+}

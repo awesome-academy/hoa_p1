@@ -1,0 +1,47 @@
+extend pug/_layout
+
+block main
+  //body
+  section.container
+    .cart
+      h2.cart__title Giỏ hàng
+    .cart-detail
+      -
+        var listTableCart = [
+          {img:'shopping_cart.jpg', name:'Lắc tay D&G', price:'345.000', amount:'1', total:'345.000'},
+          {img:'shopping_cart.jpg', name:'Lắc tay D&G', price:'345.000', amount:'2', total:'690.000'}
+        ]
+      .cart-detail__table
+        table
+          tr
+            td
+              .td-img1 ảnh
+            td
+              .td-name1 tên sản phẩm
+            td
+              .td-price1 giá
+            td
+              .td-amount1 số lượng
+            td
+              .td-total1 tổng số
+            td
+              .td-delete1 xóa
+          each index in listTableCart
+            tr
+              td
+                .td-img
+                  img(src="img/" + index.img)
+              td
+                .td-name2= index.name
+              td
+                .td-price2= index.price
+              td
+                .td-amount2= index.amount
+              td
+                .td-total2= index.total
+              td
+                i.far.fa-trash-alt.td-delete2
+      .cart-form
+        button.cart-form__continue(type="submit") Tiếp tục mua hàng
+        button.cart-form__delete(type="submit") Xóa
+        button.cart-form__update(type="submit") Cập nhật

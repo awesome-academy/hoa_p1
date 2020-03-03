@@ -1,0 +1,134 @@
+extend pug/_layout
+
+block main
+  //body
+  section.container
+    .row.detail
+      .col-md-6.detail-product
+        .detail-left
+          .carousel-product__products.clearfix.js-carousel-product
+            -var listProduct = ['detail1.jpg','detail2.jpg','detail3.jpg','detail4.jpg']
+              .detail-img
+                each index in listProduct
+                  .carousel-product__item.product.product-detail__img
+                    img(src='img/' + index)
+          .carousel-product__control.button
+            button.control-prev.slick-prev.previous(type='button')
+              img(src='img/previous.PNG', alt='Previous')
+            button.control-next.slick-next.next(type='button')
+              img(src='img/next.PNG', alt='Next')
+        .detail-right
+          img(src="img/detail5.jpg")
+      .col-md-6
+        h2.desc-title Lắc tay TYFFANY xu hướng mới nhất
+        p.desc-no TYFFANY MS 3201
+        p.desc-price
+          span 955.000
+          span 999.000
+        p.desc-detail Không thể phủ nhận  thời trang và phong cách chính là "tuyên ngôn" không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó việc mua sắm trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời trang, nhiều chị em không ngần ngại chi tiêu "mạnh tay" để sở hữu những món đồ yêu thích.
+        form(action="#").desc-form
+          label(for="color") MÀU SẮC
+          select#car(name="color")
+            option(value="silver") Màu Bạc
+            option(value="silver") Màu Bạc
+            option(value="silver") Màu Bạc
+            option(value="silver") Màu Bạc
+          label(for="size") SIZE
+          select#size(name="size") Size
+            option(value="size") 12
+            option(value="size") 12
+            option(value="size") 12
+            option(value="size") 12
+          label(for="amount") SỐ LƯỢNG
+        .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+        .desc-other
+          span.desc-other__shipping Shiping &
+          span.desc-other__return &nbsp;Returns
+  section.container
+    .row.infor-product
+      .col-md-8.infor-left
+        .infor-left__title
+          h3 Đặc điểm nổi bật
+          h3 Thông tin sản phẩm
+          h3 Đánh giá
+        .infor-left__content1
+          .infor-left__detail1
+            h4.infor-left__detail1--title The mark of a legend
+            -var listDetailProduct = ['Tự hào được ghi là năm mà Tiffany & Co là', 'thành lập, bộ sưu tập này cung cấp một cái gật đầu với', 'qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp', 'đường cong và đường nét mượt mà']
+              each index in listDetailProduct
+                p.infor-left__detail1--desc= index
+          .infor-left__image1
+            img(src="img/detail6.jpg")
+        .infor-left__content2
+          .infor-left__detail2
+            h4.infor-left__detail2--title The mark of a legend
+            -var listDetailProduct = ['Tự hào được ghi là năm mà Tiffany & Co là', 'thành lập, bộ sưu tập này cung cấp một cái gật đầu với', 'qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp', 'đường cong và đường nét mượt mà']
+              each index in listDetailProduct
+                p.infor-left__detail1--desc= index
+          .infor-left__image2
+            img(src="img/detail7.jpg")
+        .infor-left__content3
+          .infor-left__detail3
+            h4.infor-left__detail3--title The mark of a legend
+            -var listDetailProduct = ['Tự hào được ghi là năm mà Tiffany & Co là', 'thành lập, bộ sưu tập này cung cấp một cái gật đầu với', 'qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp', 'đường cong và đường nét mượt mà']
+              each index in listDetailProduct
+                p.infor-left__detail1--desc= index
+          .infor-left__image3
+            img(src="img/detail8.jpg")
+        .infor-left__content4
+          .infor-left__detail4
+            h4.infor-left__detail4--title The mark of a legend
+            -var listDetailProduct = ['Tự hào được ghi là năm mà Tiffany & Co là', 'thành lập, bộ sưu tập này cung cấp một cái gật đầu với', 'qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp', 'đường cong và đường nét mượt mà']
+              each index in listDetailProduct
+                p.infor-left__detail1--desc= index
+          .infor-left__image4
+            img(src="img/detail9.jpg")
+      .col-md-4.infor-right
+        h3.infor-right__title Sản phẩm bán chạy
+        -
+          var listBestProduct = [
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'},
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'},
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'}
+          ]
+        each index in listBestProduct
+          .infor-right__detail
+            .infor-right__detail--img
+              img(src="img/" + index.img)
+            .infor-right__detail--content
+              p.infor-right__detail--title= index.title
+              span
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+              span &nbsp;(4 lượt mua)
+              p.infor-right__detail--price= index.price
+        h3.infor-right__title Sản phẩm mua nhiều
+        -
+          var listProduct = [
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'},
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'},
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'},
+            {img:'detail10.jpg', title:'Mỹ phẩm châu Âu', price:'355.000'}
+          ]
+        each index in listProduct
+          .infor-right__detail
+            .infor-right__detail--img
+              img(src="img/" + index.img)
+            .infor-right__detail--content
+              p.infor-right__detail--title= index.title
+              span
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+                i.fas.fa-heart &nbsp;
+              span &nbsp;(4 lượt mua)
+              p.infor-right__detail--price= index.price
