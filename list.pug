@@ -1,0 +1,122 @@
+extend pug/_layout
+
+block main
+  section.list-banner
+    .list-banner__detail
+      .container
+        .row
+          .col-md-7.list-banner__detail--content
+            .list-banner__detail--title
+              h2 Giảm giá 50%
+            .list-banner__detail--desc
+              p trong vòng 3 ngày
+              p ( 25/5 - 28/5/2015)
+          .col-md-5.img
+            img(src="img/blog3_crop.png")
+  section.container.categories-detail
+    .row
+      .col-md-3
+        .categories-detail__title
+          span.navicon
+          h3.categories-title DANH MỤC SẢN PHẨM
+        .categories-detail__product
+          ul.categories-detail__product--list
+            li
+              a(href="#") Mỹ phẩm
+                i.fas.fa-caret-right
+            li
+              a(href="#") Trang sức
+                i.fas.fa-caret-right
+            li
+              a(href="#") Phụ kiện
+                i.fas.fa-caret-right
+            li
+              a(href="#") Nước hoa
+                i.fas.fa-caret-right
+        .categories-detail__compare
+          h3.categories-detail__compare--title SO SÁNH SẢN PHẨM
+          p.categories-detail__compare--content Bạn chưa có sản phẩm nào để so sánh
+        .categories-detail__tag
+          h3.categories-detail__tag--title TAG SẢN PHẨM
+          -var listProduct = ['Hoa tai', 'Son', 'Nước hoa','Giày', 'Sandal', 'Áo sơ mi', 'Nước hoa','Trẻ em', 'Thời trang nữ']
+            .categories-detail__tag--content
+              each index in listProduct
+                a.categories-detail__tag--item(href='#')= index
+        .categories-detail__image
+          img(src="img/list1.jpg")
+      .col-md-9
+        .categories-detail__icon
+          i.fas.fa-th-large
+          i.fas.fa-list
+        .categories-detail__list
+          .categories-detail__list--image
+            img(src="img/nail_pink.JPG")
+          .categories-detail__list--content
+            h4.categories-detail__list--title Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới
+            span
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+            span &nbsp;(4 lượt mua)
+            p Tự hào được ghi là năm mà Tiffany & Co là
+            p thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gật đầu với
+            p qua  trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+            p đường cong và đường nét mượt mà.
+            p.infor-right__detail--price 355.000
+            .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+        .categories-detail__list
+          .categories-detail__list--image
+            img(src="img/nail_pink.JPG")
+          .categories-detail__list--content
+            h4.categories-detail__list--title Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới
+            span
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+            span &nbsp;(4 lượt mua)
+            p Tự hào được ghi là năm mà Tiffany & Co là
+            p thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gật đầu với
+            p qua  trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+            p đường cong và đường nét mượt mà.
+            p.infor-right__detail--price 355.000
+            .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+        .categories-detail__list
+          .categories-detail__list--image
+            img(src="img/nail_pink.JPG")
+          .categories-detail__list--content
+            h4.categories-detail__list--title Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới
+            span
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+              i.fas.fa-heart &nbsp;
+            span &nbsp;(4 lượt mua)
+            p Tự hào được ghi là năm mà Tiffany & Co là
+            p thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gật đầu với
+            p qua  trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+            p đường cong và đường nét mượt mà.
+            p.infor-right__detail--price 355.000
+            .product__interact
+              a.product__buy(href='#') Mua hàng
+              button.product__love(type='button')
+                i.fas.fa-heart
+              button.product__change(type='button')
+                i.fas.fa-sync-alt
+        .categories-detail__icon
+          i.fas.fa-th-large
+          i.fas.fa-list

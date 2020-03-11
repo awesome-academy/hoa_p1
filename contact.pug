@@ -1,0 +1,23 @@
+extend pug/_layout
+
+block main
+  // body
+  section.container
+    h2.contact-page__title Liên hệ
+    .row.contact-page
+      .col-md-6
+        img(src='img/contact.jpg', alt='Image Map')
+      .col-md-6
+        .email
+          h3.email-title Gửi email cho chúng tôi
+          form.email-form(action='#')
+            .contact-left
+              label(for='name') Tên *
+              label(for='email') Email *
+              label(for='message') Tin nhắn *
+            .contact-right
+              input.email-form__name(type='text', name='name')
+              input.email-form__email(type='email', name='email')
+              textarea(name="message" cols="30", rows="4").email-form__message
+          button.send-contact(type="submit") Gửi
+  // end body
