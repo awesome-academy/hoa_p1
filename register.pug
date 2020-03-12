@@ -1,0 +1,33 @@
+extend pug/_layout
+
+block main
+  // body
+  section.container
+    .register
+      h2.register__title Đăng Ký
+    .register-detail
+      h3.register-detail__title Thông tin cá nhân
+      form.user-form(action='#')
+        label(for='first_name') Tên trước *
+        input.user-form__first(type='text', name='first_name')
+        label(for='last_name') Tên sau *
+        input.user-form__last(type='text', name='last_name')
+        label(for='email') Email *
+        input.user-form__email(type='email', name='email')
+        label(for='password') Password
+        input.user-form__password(type='password', name='password')
+        span.register-des__checkbox
+          input(type='checkbox', name='register-des')
+          label(for='register-des') Đăng ký nhận bản tin
+      h3.register-detail__title Thông tin đăng nhập
+      form.login-form(action='#')
+        label(for='password') Mật khẩu *
+        input.login-form__password(type='password', name='password')
+        label(for='confirm_password') Xác nhận mật khẩu *
+        input.login-form__confirm(type='password', name='confirm_password')
+        span.login-form__button
+          button.send(type='submit') Gửi
+          button.return(type='reset')
+            i.fas.fa-reply
+            |  Quay lại
+  // end body

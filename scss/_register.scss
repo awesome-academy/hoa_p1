@@ -1,0 +1,54 @@
+.register{
+  padding: 13% 0 2%;
+
+  &-detail{
+    margin-bottom: 5%;
+    border: 1px solid #dedbdb;
+    padding: 5%;
+    background-color: #f1f1f1;
+
+    &__title{
+      text-transform: uppercase;
+    }
+  }
+
+  &-des__checkbox{
+    display: inline;
+  }
+}
+
+.user-form{
+  display: grid;
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+
+.login-form{
+  display: grid;
+  font-weight: 500;
+
+  &__button{
+    margin-top: 3%;
+  }
+}
+
+.user-form__first,.user-form__last,.user-form__email,.user-form__password,.login-form__password{
+  margin-bottom: 1%;
+}
+
+.send{
+  color: #fff;
+  background-color: #232222;
+  border: 1px solid;
+  text-transform: uppercase;
+  padding: 0.5% 1%;
+}
+
+.return{
+  float: right;
+  color: #fff;
+  background-color: #232222;
+  border: 1px solid;
+  text-transform: uppercase;
+  padding: 0.5% 1%;
+}

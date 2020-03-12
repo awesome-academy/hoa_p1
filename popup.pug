@@ -1,0 +1,19 @@
+include pug/_head
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    +head('Mandala | Home')
+    block head
+  body
+  .popup
+    i.fas.fa-times
+    .popup-image
+      img(src="img/popup.jpg")
+      .popup-content
+        h1.popup-content__title Gửi Email
+        p.popup-content__detail Hãy gửi email của bạn liên hệ với cúng tôi để được tư vẫn tốt nhất
+        p.popup-content__detail Sự hài lòng của bạn là thành công của chúng tôi
+        form(action="#").popup-content__form
+          input(type="email", name="email" placeholder="Email của bạn...").popup-content__form--input
+        a(href="#").popup-content__link Gửi email

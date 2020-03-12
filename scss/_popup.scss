@@ -1,0 +1,52 @@
+.popup {
+  i {
+    margin-left: 50%;
+    font-size: 28px;
+    color: #eadddd;
+    margin-top: 2%;
+    cursor: pointer;
+  }
+
+  &-image{
+    position: relative;
+    margin-left: 23%;
+  }
+
+  img {
+    width: 70%;
+  }
+
+  &-content {
+    position: absolute;
+    left: 10%;
+    top: 36%;
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+    }
+
+    &__detail {
+      margin-bottom: 0;
+      color: #757474;
+    }
+
+    &__form {
+      margin-top: 5%;
+      margin-bottom: 6%;
+
+      &--input {
+        width: 100%;
+        border-radius: 20px;
+        padding-left: 3%;
+        border: 1px solid #b7b7b7;
+      }
+    }
+
+    &__link {
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: #252323;
+    }
+  }
+}

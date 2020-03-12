@@ -1,0 +1,61 @@
+.login{
+  padding-top: $paddingtop2;
+  display: flex;
+  padding-bottom: 2%;
+
+  &__title{
+    text-transform: uppercase;
+  }
+
+  &__submit{
+    width: 9%;
+    margin-left: 74%;
+    text-transform: uppercase;
+    height: fit-content;
+    color: #fff;
+    background-color: #232222;
+    border: 1px solid;
+    font-size: 17px;
+    padding: 0.5% 1%;
+  }
+
+  &-detail{
+    margin-bottom: 5%;
+    border: 1px solid #dedbdb;
+    padding: 5%;
+    background-color: #f1f1f1;
+
+    &__des{
+      font-weight: 500;
+      padding: 1% 0 3%;
+    }
+  }
+
+  &-form{
+    display: grid;
+    font-weight: 500;
+
+    &__submit{
+      text-transform: uppercase;
+      height: fit-content;
+      color: #fff;
+      background-color: #232222;
+      border: 1px solid;
+      padding: 0.5% 1%;
+      width: 13%;
+      margin-left: 3%;
+    }
+
+    &__email{
+      width: 50%;
+      border: 1px solid #dedbdb;
+      margin-bottom: 1%;
+    }
+
+    &__password{
+      width: 50%;
+      border: 1px solid #dedbdb;
+      margin-bottom: 3%;
+    }
+  }
+}

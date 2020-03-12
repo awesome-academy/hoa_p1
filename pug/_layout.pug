@@ -8,7 +8,7 @@ html(lang="en")
     block head
   body
     // header
-    header.header
+    header.header.js-header
       .container
         .row
           // logo
@@ -16,8 +16,11 @@ html(lang="en")
             a(href='#')
               | Mandala
           // end logo
+          .header__collapse-button
+            button(type="button").button-collapse.js-button-collapse
+              i.fas.fa-bars
           // navigation
-          nav.header__nav
+          nav.header__nav.js-header-nav
             ul.nav
               li.nav__item
                 a.nav__link(href='#') Trang chủ
@@ -30,21 +33,18 @@ html(lang="en")
                 ul.nav__children.nav.triangle-up.triangle-up--green
                   li.nav__item
                     a.nav__link(href='#') Dưỡng da
-                    -var listCare = ['Áo khoác','Bộ áo liền quần','Dresses','Quần / Váy','Quần short','Quần jeans','Đồ đan','Áo nỉ']
                       ul.nav__item--care
                         each index in listCare
                           li.nav__children--care
                             a(href='#')=index
                   li.nav__item
                     a.nav__link(href='#') Nước hoa
-                    -var listPerfume = ['Áo cánh / Áo sơ mi','Túi xách & Ba lô','Khăn quàng cổ và Foulards','Dệt kim Hats & Gloves','Vớ & Socks','Jewerly','Bi bảo vệ','Giày']
                       ul.nav__item--care
                         each index in listPerfume
                           li.nav__children--care
                             a(href='#')=index
                   li.nav__item
                     a.nav__link(href='#') Trang sức
-                    -var listPerfume = ['Áo cánh / Áo sơ mi','Túi xách & Ba lô','Khăn quàng cổ và Foulards','Dệt kim Hats & Gloves','Vớ & Socks','Jewerly','Bi bảo vệ','Giày']
                       ul.nav__item--care
                         each index in listPerfume
                           li.nav__children--care
@@ -101,28 +101,24 @@ html(lang="en")
                   | Support@bizweb.vn
           .footer-others.main-footer__item
             h4.main-footer__title Chuyển hàng
-            -var listTransform = ['Mua sắm trực tuyến','Đến từ chúng tôi gửi đến','Chính sách vận chuyển','Vận chuyển thông tin']
               ul.footer-others__content
-                each index in listTransform 
+                each index in listTransform
                   li.footer-others__item
                     a.footer-others__link(href='#')= index
           .footer-others.main-footer__item
             h4.main-footer__title Hỗ trợ
-            -var listSupport = ['Câu chuyện về chúng tôi','Thanh toán an toàn','Tùy chọn vận chuyển','Chính sách vận chuyển']
               ul.footer-others__content
                 each index in listSupport
                   li.footer-others__item
                     a.footer-others__link(href='#')= index
           .footer-others.main-footer__item
             h4.main-footer__title Thông tin
-            -var listInfo = ['Về chúng tôi','Điều khoản & điều kiện','Chính sách riêng tư','Đơn đặt hàng và Returns']
               ul.footer-others__content
                 each index in listInfo
                   li.footer-others__item
                     a.footer-others__link(href='#')= index
           .footer-others.main-footer__item
             h4.main-footer__title My account
-            -var listAccount = ['Xem giỏ hàng','Sản phẩm yêu thích','Kiểm tra','Theo dõi đặt hàng của tôi']
               ul.footer-others__content
                 each index in listAccount
                   li.footer-others__item
