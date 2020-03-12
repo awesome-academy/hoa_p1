@@ -1,0 +1,20 @@
+extend pug/_layout
+
+block main
+  // body
+  section.container
+    .login
+      h2.login__title Đăng nhập
+      button.login__submit(type='submit') Đăng ký
+    .login-detail
+      h3.login-detail__title Khách hàng đăng ký
+      p.login-detail__des Nếu bạn có một tài khoản, xin vui lòng đăng nhập.
+      form.login-form(action='#')
+        label(for='email') Địa chỉ email *
+        input.login-form__email(type='email', name='email')
+        label(for='password') Password *
+        input.login-form__password(type='password', name='password')
+        p
+          span Quên mật khẩu
+          button.login-form__submit(type='submit') Đăng nhập
+  // end body

@@ -37,18 +37,20 @@ block main
           .row
             .categories__multiple
               .categories__item.categories__item--bottom.clearfix
-                a(href='#')
-                  img(src='img/perfume.JPG', alt='Sữa Tắm')
+                .categories__image.image
+                  a(href='#')
+                    img(src='img/perfume.JPG', alt='Sữa Tắm')
                 .categories__title.categories__title--sunny.triangle-left.triangle-left--sunny
                   a.title-link.title-link--light.title-link--bg-sunny(href='#') Sữa tắm
               .categories__item.clearfix
-                a.saleoff(href='#')
-                  img(src='img/saleoff.JPG', alt='Giảm giá')
-                .categories__title.categories__title--grapes.triangle-right.triangle-right--grapes
+                .categories__image
+                  a(href='#')
+                    img(src='img/saleoff.JPG', alt='Giảm giá')
+                .categories__title.image.categories__title--grapes.triangle-right.triangle-right--grapes
                   a.title-link.title-link--dark.title-link--bg-grapes(href='#') Nước hoa
             .categories__introduce.categories__introduce--right
-              .categories__item
-                img.crown(src='img/crown.JPG', alt='Video')
+              .categories__item--video
+                img(src='img/crown.JPG', alt='Video')
                 .control
                   button.control__button
           .row
@@ -56,15 +58,15 @@ block main
               .categories__item
                 a.combo(href='#')
                   img(src='img/combo.JPG', alt='Combo Tắm Trắng')
-            .categories__multiple
-              .categories__item.categories__item--bottom.clearfix
+            .categories__multiple.multiple1
+              .categories__item1.categories__item--bottom.clearfix
                 a.right(href='#')
                   img(src='img/diamond_gift.JPG', alt='Trang Sức')
                 .categories__title.categories__title--sea.triangle-right.triangle-right--sea
                   a.title-link.title-link--dark.title-link--bg-sea.title-link--small(href='#') Trang sức
-              .categories__item.clearfix
+              .categories__item1.clearfix
                 a.woman(href='#')
-                  img(src='img/flower_woman.JPG', alt='Giảm giá')
+                  img(src='img/flower_woman.JPG')
                 .categories__title.categories__title--last.categories__title--rose.triangle-left.triangle-left--rose
                   a.title-special(href='#')
                     img.title-special__img(src='img/perfume.PNG', alt='Nước hoa')
@@ -123,7 +125,6 @@ block main
         // end carousel-product-tab
         // carousel-product-nav for category
         .carousel-product__nav
-          -var listCategory = ['Chăm sóc da', 'Dành cho tóc', 'Nước hoa', 'Trang sức', 'Quà tặng']
           ul.nav
             li.nav__item.first
               a.nav__link(href='#') Mỹ phẩm
@@ -135,8 +136,7 @@ block main
       // carousel-product-main
       // carousel-new-product
       #new-product.container.carousel-product__main
-        .carousel-product__products.clearfix.js-carousel-product
-          // carousel-product-item
+        .carousel-product__products.clearfix.js-carousel-productusel-product-item
           .carousel-product__item.product
             img.product__img(src='img/oil_yellow.JPG', alt='Son Môi')
             .product__detail

@@ -1,0 +1,21 @@
+include pug/_head
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    +head('Mandala | Home')
+    block head
+  body
+    .layout-image
+      img(src="img/Page 404.jpg")
+    section.container
+      .layout-content
+        p.layout-content__note Đây không phải là trang web bạn đang tìm kiếm
+        .layout-content__form
+          form(action="#").layout-form
+            input.layout-form__input(type="text", name="name")
+            i.fas.fa-search
+        .layout-content__contact
+          span LIÊN HỆ&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          span TRANG CHỦ
+

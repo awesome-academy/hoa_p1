@@ -1,26 +1,26 @@
 .blog {
   &-detail {
-    padding-top: 10%;
+    padding-top: $paddingtop3;
     padding-bottom: 10%;
-  
+
     &__title {
       text-transform: uppercase;
     }
-  
+
     &__des {
       text-transform: uppercase;
     }
-  
+
     &__content {
       padding-bottom: 5%;
     }
-  
+
     &__image {
       display: block;
       position: relative;
       padding-top: 56.25%;
       margin: 14% 0;
-  
+
       img {
         display: block;
         position: absolute;
@@ -34,7 +34,7 @@
     &__white {
       margin-top: -19%;
       display: flex;
-  
+
       .blog-white {
         &__left {
           background-color: #fff;
@@ -42,7 +42,7 @@
           position: relative;
           color: #fff;
           margin-right: 10%;
-  
+
           &::after {
             position: absolute;
             color: #fff;
@@ -58,7 +58,7 @@
           width: 45%;
           position: relative;
           color: #fff;
-  
+
           &::before {
             position: absolute;
             color: #fff;
@@ -128,13 +128,13 @@
       border-bottom: 1px solid #e7e7e7;
       padding-bottom: 12px;
     }
-  
+
     &__more {
       margin-bottom: 2%;
 
       a {
         color: #615f5f;
-    
+
         &:nth-last-child(1) {
           float: right;
         }
@@ -150,7 +150,7 @@
         font-size: 19px;
         color: #b4b4b4;
       }
-      
+
       .men {
         font-weight: 600;
       }
@@ -243,7 +243,7 @@
       }
     }
   }
-} 
+}
 
 .form__title {
   text-transform: uppercase;
@@ -285,5 +285,47 @@
     padding: 0.5% 1%;
     margin-top: 3%;
     margin-left: 14%;
+  }
+}
+
+@media (width: 750px) {
+  .form-idea {
+    .form-input {
+      label {
+        width: 11%;
+      }
+    }
+
+    .submit {
+      margin-left: 17%;
+    }
+  }
+
+  .blog-video {
+    &__controlbutton {
+      top: 84%;
+    }
+  }
+}
+
+@media (width: 480px) {
+  .blog-video {
+    &__controlbutton {
+      top: 84%;
+    }
+  }
+
+  .blog-detail {
+    padding-top: 19%;
+  }
+  .form-idea {
+    .form-input {
+      display: block;
+
+      label {
+        width: 100%;
+        padding-left: 7%;
+      }
+    }
   }
 }
